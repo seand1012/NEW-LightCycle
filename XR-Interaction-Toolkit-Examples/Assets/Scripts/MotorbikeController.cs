@@ -4,8 +4,7 @@ public class MotorbikeController : MonoBehaviour
 {
     public float force = 500.0f;
     public float maxRotationSpeed = 100.0f;
-    public float lateralDragFactor = 0.99f;   // Drag factor for lateral movement reduction
-
+    public float lateralFriction = 0.95f;  // High friction to minimize unwanted lateral movement
 
     private Rigidbody rb;
 
@@ -16,29 +15,28 @@ public class MotorbikeController : MonoBehaviour
 
     void FixedUpdate()
     {
-        // Forward movement
+        // Input for acceleration and steering
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
 
+        // Applying forward force
         Vector3 forceDirection = transform.up * moveVertical * force;
         rb.AddForce(forceDirection);
 
+        // Calculate the current speed and local velocity
         float currentSpeed = rb.velocity.magnitude;
-        var localVel = transform.InverseTransformDirection(rb.velocity);
-        
-        localVel.y *= lateralDragFactor;
+        Vector3 localVel = transform.InverseTransformDirection(rb.velocity);
+
+        // Apply high friction to lateral movement (x-axis for your model's orientation)
+        localVel.x *= lateralFriction;
         rb.velocity = transform.TransformDirection(localVel);
 
-
-        // Turning
-        if (currentSpeed > 0.05) {
-            float rotationFactor = 1;
-            if(localVel.y < 0){
-                rotationFactor = -1;
-            }
+        // Apply turning
+        if (currentSpeed > 0.05) {  // Ensures there's some movement for realistic turning
+            float rotationFactor = localVel.y >= 0 ? 1 : -1;
             float rotationSpeed = Mathf.Lerp(0, maxRotationSpeed, currentSpeed / 10.0f); // Assuming 10.0f is the speed at which maximum rotation rate is achieved
             float rotation = moveHorizontal * rotationSpeed * Time.deltaTime * rotationFactor;
-            Quaternion turn = Quaternion.Euler(0f, 0f, rotation);
+            Quaternion turn = Quaternion.Euler(0f, 0f, rotation);  // Rotation around the z-axis
             rb.MoveRotation(rb.rotation * turn);
         }
     }
