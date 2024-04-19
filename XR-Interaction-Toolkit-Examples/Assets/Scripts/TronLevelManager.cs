@@ -5,7 +5,15 @@ using UnityEngine;
 
 public class TronLevelManager : MonoBehaviour
 {
+    public Transform Player;
+    public GameObject PlayerPrefab;
+    public GameObject Camera;
     // Start is called before the first frame update
+    /*private void Start()
+    {
+        Player = NetworkManager
+    }*/
+
     void OnGUI()
     {
         GUILayout.BeginArea(new Rect(10, 10, 300, 300));
