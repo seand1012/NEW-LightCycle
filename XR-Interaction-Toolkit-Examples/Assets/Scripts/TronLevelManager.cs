@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography;
 using Unity.Netcode;
+using Unity.Networking.Transport;
 using UnityEngine;
+using UnityEngine.Networking;
 
-public class TronLevelManager : MonoBehaviour
+public class TronLevelManager : NetworkManager
 {
     public GameObject[] playerPrefabs; // Array of player prefabs
     public Transform[] spawnPoints; // Array of spawn point
@@ -17,6 +19,10 @@ public class TronLevelManager : MonoBehaviour
         spawnPosition = new Vector3(20f, 20f, 20f);
     }
 
+    public override void OnServerAddPlayer(NetworkConnection conn, short playerControllerId)
+    {
+        playerPrefabs[0] =
+    }
     void OnGUI()
     {
         GUILayout.BeginArea(new Rect(10, 10, 300, 300));
@@ -52,22 +58,24 @@ public class TronLevelManager : MonoBehaviour
                 if (mousePosition.y >= 10 && mousePosition.y <= 110)
                 {
                     // Host button clicked
+                    //SpawnObject(Resources.Load<GameObject>("Prefabs/tron_bike"));
                     NetworkManager.Singleton.StartHost();
-                    SpawnObject(Resources.Load<GameObject>("Prefabs/tron_bike"));
+                    //NetworkManager.
 
                 }
                 else if (mousePosition.y >= 120 && mousePosition.y <= 220)
                 {
                     // Client button clicked
-                    NetworkManager.Singleton.StartClient();
-                    SpawnObject(Resources.Load<GameObject>("Prefabs/tron_bike"));
+                    //NetworkManager.Singleton.StartClient();
+                    //SpawnObject(Resources.Load<GameObject>("Prefabs/tron_bike"));
+                    
                 }
                 else if (mousePosition.y >= 230 && mousePosition.y <= 330)
                 {
                     // Server button clicked
 
-                    NetworkManager.Singleton.StartServer();
-                    SpawnObject(Resources.Load<GameObject>("Prefabs/tron_bike"));
+                    //NetworkManager.Singleton.StartServer();
+                    //SpawnObject(Resources.Load<GameObject>("Prefabs/tron_bike"));
                 }
             }
         }
