@@ -67,7 +67,7 @@ public class TronLevelManager : NetworkManager
                 else if (mousePosition.y >= 120 && mousePosition.y <= 220)
                 {
                     // Client button clicked
-                    //NetworkManager.Singleton.StartClient();
+                    NetworkManager.Singleton.StartClient();
                     //SpawnObject(Resources.Load<GameObject>("Prefabs/tron_bike"));
                     
                 }
@@ -75,7 +75,7 @@ public class TronLevelManager : NetworkManager
                 {
                     // Server button clicked
 
-                    //NetworkManager.Singleton.StartServer();
+                    NetworkManager.Singleton.StartServer();
                     //SpawnObject(Resources.Load<GameObject>("Prefabs/tron_bike"));
                 }
             }
