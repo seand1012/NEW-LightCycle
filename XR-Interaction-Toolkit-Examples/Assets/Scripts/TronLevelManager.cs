@@ -1,44 +1,88 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using Unity.Netcode;
+using Unity.Networking.Transport;
 using UnityEngine;
+using UnityEngine.Networking;
 
-public class TronLevelManager : MonoBehaviour
+public class TronLevelManager : NetworkManager
 {
-    public Transform Player;
-    public GameObject PlayerPrefab;
-    public GameObject Camera;
-    // Start is called before the first frame update
-    /*private void Start()
-    {
-        Player = NetworkManager
-    }*/
+    public GameObject[] playerPrefabs; // Array of player prefabs
+    public Transform[] spawnPoints; // Array of spawn point
+    public Vector3 spawnPosition; // Variable to hold the spawn position
 
+
+    void Start()
+    {
+        // You can initialize any required variables or setup here
+        spawnPosition = new Vector3(20f, 20f, 20f);
+    }
+
+    /*public override void OnServerAddPlayer(NetworkConnection conn, short playerControllerId)
+    {
+        playerPrefabs[0] = Resources.Load<GameObject>("Assets/Prefabs/TronVillain.prefab");
+        playerPrefabs[1] = Resources.Load<GameObject>("Assets/Prefabs/TronHero.prefab");
+    }*/
     void OnGUI()
     {
         GUILayout.BeginArea(new Rect(10, 10, 300, 300));
+        GUILayout.Button("Host");
+        GUILayout.Button("Client");
+        GUILayout.Button("Server");
         if (!NetworkManager.Singleton.IsClient && !NetworkManager.Singleton.IsServer)
         {
-            StartButtons();
+            CheckStartButtons();
         }
         else
         {
             StatusLabels();
-
-            //SubmitNewPosition();
         }
-
         GUILayout.EndArea();
     }
 
-    static void StartButtons()
+    void CheckStartButtons()
     {
-        if (GUILayout.Button("Host")) NetworkManager.Singleton.StartHost();
-        if (GUILayout.Button("Client")) NetworkManager.Singleton.StartClient();
-        if (GUILayout.Button("Server")) NetworkManager.Singleton.StartServer();
+        if (Event.current.type == EventType.Repaint || Event.current.type == EventType.Layout)
+            return;
+
+        
+
+        if (Input.GetMouseButtonUp(0)) // Check for left mouse button release
+        {
+            Vector2 mousePosition = Event.current.mousePosition;
+
+            // Check if mouse position is within the button area
+            if (mousePosition.x >= 10 && mousePosition.x <= 310 && mousePosition.y >= 10 && mousePosition.y <= 310)
+            {
+                // Determine which button was clicked based on mouse position
+                if (mousePosition.y >= 10 && mousePosition.y <= 110)
+                {
+                    // Host button clicked
+                    //SpawnObject(Resources.Load<GameObject>("Prefabs/tron_bike"));
+                    NetworkManager.Singleton.StartHost();
+                    //NetworkManager.
+
+                }
+                else if (mousePosition.y >= 120 && mousePosition.y <= 220)
+                {
+                    // Client button clicked
+                    //NetworkManager.Singleton.StartClient();
+                    //SpawnObject(Resources.Load<GameObject>("Prefabs/tron_bike"));
+                    
+                }
+                else if (mousePosition.y >= 230 && mousePosition.y <= 330)
+                {
+                    // Server button clicked
+
+                    //NetworkManager.Singleton.StartServer();
+                    //SpawnObject(Resources.Load<GameObject>("Prefabs/tron_bike"));
+                }
+            }
+        }
     }
 
-    static void StatusLabels()
+    void StatusLabels()
     {
         var mode = NetworkManager.Singleton.IsHost ?
             "Host" : NetworkManager.Singleton.IsServer ? "Server" : "Client";
@@ -47,22 +91,12 @@ public class TronLevelManager : MonoBehaviour
             NetworkManager.Singleton.NetworkConfig.NetworkTransport.GetType().Name);
         GUILayout.Label("Mode: " + mode);
     }
-    /*
-    static void SubmitNewPosition()
+
+    // Function to spawn an object at a specified position
+    public void SpawnObject(GameObject objectToSpawn)
     {
-        if (GUILayout.Button(NetworkManager.Singleton.IsServer ? "Move" : "Request Position Change"))
-        {
-            if (NetworkManager.Singleton.IsServer && !NetworkManager.Singleton.IsClient)
-            {
-                foreach (ulong uid in NetworkManager.Singleton.ConnectedClientsIds)
-                    NetworkManager.Singleton.SpawnManager.GetPlayerNetworkObject(uid).GetComponent<HelloWorldPlayer>().Move();
-            }
-            else
-            {
-                var playerObject = NetworkManager.Singleton.SpawnManager.GetLocalPlayerObject();
-                var player = playerObject.GetComponent<HelloWorldPlayer>();
-                player.Move();
-            }
-        }
-    }*/
+        Debug.Log("Spawn Position: " + spawnPosition);
+        Debug.Log(objectToSpawn.ToString());
+        Instantiate(objectToSpawn, spawnPosition, Quaternion.identity);
+    }
 }
