@@ -16,7 +16,7 @@ public class TronLevelManager : NetworkManager
     void Start()
     {
         // You can initialize any required variables or setup here
-        spawnPosition = new Vector3(20f, 20f, 20f);
+        //spawnPosition = new Vector3(20f, 20f, 20f);
     }
 
     /*public override void OnServerAddPlayer(NetworkConnection conn, short playerControllerId)
