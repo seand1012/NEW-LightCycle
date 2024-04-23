@@ -2,17 +2,39 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Unity.Netcode;
+using UnityEngine.SceneManagement;
+using System;
 
 public class PlayerSpawner : NetworkBehaviour
 {
     public GameObject[] playerPrefabs; // Array of player prefabs
+    [SerializeField]
+    private GameObject playerPrefab;
 
+    void Start()
+    {
+        //DontDestroyOnLoad(this, gameObject);
+    }
     public override void OnNetworkSpawn()
     {
+        //NetworkManager.Singleton.SceneManager.OnLoadComplete += SceneLoaded;
         if (IsServer)
         {
+            
             // Only the server should spawn player objects
             SpawnPlayer();
+        }
+    }
+
+    private void SceneLoaded(string sceneName, LoadSceneMode loadSceneMode, List<ulong> clientsCompleted, List<ulong> clientsTimedOut)
+    {
+        if(IsHost && sceneName == "TronLevel")
+        {
+            foreach(ulong id in clientsCompleted)
+            {
+                GameObject player = Instantiate(playerPrefab);
+                player.GetComponent<NetworkObject>().SpawnAsPlayerObject(id, true);
+            }
         }
     }
 
