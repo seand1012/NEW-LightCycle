@@ -5,15 +5,16 @@ using Unity.Netcode;
 using UnityEngine.SceneManagement;
 using System;
 
+// Credit to Cuebat on YouTube for the tutorial
 public class PlayerSpawner : NetworkBehaviour
 {
     public GameObject[] playerPrefabs; // Array of player prefabs
     [SerializeField]
-    private GameObject playerPrefab;
+    private GameObject playerPrefab = ;
 
     void Start()
     {
-        //DontDestroyOnLoad(this, gameObject);
+        DontDestroyOnLoad(this.gameObject);
     }
     public override void OnNetworkSpawn()
     {
@@ -35,6 +36,10 @@ public class PlayerSpawner : NetworkBehaviour
                 GameObject player = Instantiate(playerPrefab);
                 player.GetComponent<NetworkObject>().SpawnAsPlayerObject(id, true);
             }
+        }
+        else if (!IsHost)
+        {
+
         }
     }
 
