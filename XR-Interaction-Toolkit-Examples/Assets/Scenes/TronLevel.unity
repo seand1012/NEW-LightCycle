@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.010781681, g: 0.020174641, b: 0.034410235, a: 1}
+  m_IndirectSpecularColor: {r: 0.010781673, g: 0.020174626, b: 0.034410212, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1262,7 +1262,7 @@ TrailRenderer:
     generateLightingData: 1
   m_MinVertexDistance: 0.1
   m_MaskInteraction: 0
-  m_Autodestruct: 1
+  m_Autodestruct: 0
   m_Emitting: 1
   m_ApplyActiveColorSpace: 1
 --- !u!114 &658554300
@@ -2085,6 +2085,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56551472d5198dd47bf429728b8f8364, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NetworkConfig:
+    ProtocolVersion: 0
+    NetworkTransport: {fileID: 0}
+    PlayerPrefab: {fileID: 0}
+    Prefabs:
+      NetworkPrefabsLists: []
+    TickRate: 30
+    ClientConnectionBufferTimeout: 10
+    ConnectionApproval: 0
+    ConnectionData: 
+    EnableTimeResync: 0
+    TimeResyncInterval: 30
+    EnsureNetworkVariableLengthSafety: 0
+    EnableSceneManagement: 1
+    ForceSamePrefabs: 1
+    RecycleNetworkIds: 1
+    NetworkIdRecycleDelay: 120
+    RpcHashSize: 0
+    LoadSceneTimeOut: 120
+    SpawnTimeout: 10
+    EnableNetworkLogs: 1
+    OldPrefabList: []
+  RunInBackground: 1
+  LogLevel: 1
+  playerPrefabs: []
+  spawnPoints: []
+  spawnPosition: {x: 0, y: 0, z: 0}
 --- !u!1001 &1349258538
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2584,6 +2611,30 @@ PrefabInstance:
     - target: {fileID: 7787244831629783105, guid: d9335160649c641839a9d2ac5f59d4ea, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 5.852
+      objectReference: {fileID: 0}
+    - target: {fileID: 8053560625548208965, guid: d9335160649c641839a9d2ac5f59d4ea, type: 3}
+      propertyPath: looping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8053560625548208965, guid: d9335160649c641839a9d2ac5f59d4ea, type: 3}
+      propertyPath: lengthInSec
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8053560625548208965, guid: d9335160649c641839a9d2ac5f59d4ea, type: 3}
+      propertyPath: autoRandomSeed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8053560625548208965, guid: d9335160649c641839a9d2ac5f59d4ea, type: 3}
+      propertyPath: InitialModule.maxNumParticles
+      value: 5000
+      objectReference: {fileID: 0}
+    - target: {fileID: 8053560625548208965, guid: d9335160649c641839a9d2ac5f59d4ea, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 8053560625548208965, guid: d9335160649c641839a9d2ac5f59d4ea, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
