@@ -10,7 +10,7 @@ public class PlayerSpawner : NetworkBehaviour
 {
     public GameObject[] playerPrefabs; // Array of player prefabs
     [SerializeField]
-    private GameObject playerPrefab = ;
+    private GameObject playerPrefab;
 
     void Start()
     {
