@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.010781681, g: 0.020174641, b: 0.034410235, a: 1}
+  m_IndirectSpecularColor: {r: 0.010781673, g: 0.020174626, b: 0.034410212, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -793,7 +793,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 1, y: 2.4192193, z: 1.5555}
   m_Center: {x: -0.0066695213, y: 0.00037717828, z: -0.0011229516}
@@ -1354,6 +1354,18 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7787244831629783105, guid: d9335160649c641839a9d2ac5f59d4ea, type: 3}
   m_PrefabInstance: {fileID: 1713584633}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &658554311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 658554283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4060e47bc5a649e29993139db3899ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &704303781
 GameObject:
   m_ObjectHideFlags: 0
@@ -2601,31 +2613,43 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 287390435833684414, guid: d9335160649c641839a9d2ac5f59d4ea, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.02767225
+      value: 0.001
       objectReference: {fileID: 0}
     - target: {fileID: 287390435833684414, guid: d9335160649c641839a9d2ac5f59d4ea, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.3565175
+      value: 0.001
       objectReference: {fileID: 0}
     - target: {fileID: 287390435833684414, guid: d9335160649c641839a9d2ac5f59d4ea, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.488
+      value: 0.001
       objectReference: {fileID: 0}
     - target: {fileID: 287390435833684414, guid: d9335160649c641839a9d2ac5f59d4ea, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.095
+      value: -0.09
       objectReference: {fileID: 0}
     - target: {fileID: 287390435833684414, guid: d9335160649c641839a9d2ac5f59d4ea, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.604
+      value: -1.95
       objectReference: {fileID: 0}
     - target: {fileID: 287390435833684414, guid: d9335160649c641839a9d2ac5f59d4ea, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0.444
       objectReference: {fileID: 0}
+    - target: {fileID: 2489740824233725192, guid: d9335160649c641839a9d2ac5f59d4ea, type: 3}
+      propertyPath: m_Layer
+      value: 29
+      objectReference: {fileID: 0}
+    - target: {fileID: 2489740824233725192, guid: d9335160649c641839a9d2ac5f59d4ea, type: 3}
+      propertyPath: m_TagString
+      value: Particle
+      objectReference: {fileID: 0}
     - target: {fileID: 7447275134005177083, guid: d9335160649c641839a9d2ac5f59d4ea, type: 3}
       propertyPath: m_Name
       value: tron_bike
+      objectReference: {fileID: 0}
+    - target: {fileID: 7447275134005177083, guid: d9335160649c641839a9d2ac5f59d4ea, type: 3}
+      propertyPath: m_Layer
+      value: 29
       objectReference: {fileID: 0}
     - target: {fileID: 7787244831629783105, guid: d9335160649c641839a9d2ac5f59d4ea, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2692,6 +2716,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8053560625548208965, guid: d9335160649c641839a9d2ac5f59d4ea, type: 3}
+      propertyPath: CollisionModule.type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8053560625548208965, guid: d9335160649c641839a9d2ac5f59d4ea, type: 3}
       propertyPath: ShapeModule.m_Scale.x
       value: 1
       objectReference: {fileID: 0}
@@ -2705,7 +2733,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8053560625548208965, guid: d9335160649c641839a9d2ac5f59d4ea, type: 3}
       propertyPath: CollisionModule.enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8053560625548208965, guid: d9335160649c641839a9d2ac5f59d4ea, type: 3}
       propertyPath: ShapeModule.radiusThickness
@@ -2714,6 +2742,14 @@ PrefabInstance:
     - target: {fileID: 8053560625548208965, guid: d9335160649c641839a9d2ac5f59d4ea, type: 3}
       propertyPath: InitialModule.maxNumParticles
       value: 5000
+      objectReference: {fileID: 0}
+    - target: {fileID: 8053560625548208965, guid: d9335160649c641839a9d2ac5f59d4ea, type: 3}
+      propertyPath: CollisionModule.m_Bounce.scalar
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8053560625548208965, guid: d9335160649c641839a9d2ac5f59d4ea, type: 3}
+      propertyPath: CollisionModule.collisionMessages
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8053560625548208965, guid: d9335160649c641839a9d2ac5f59d4ea, type: 3}
       propertyPath: EmissionModule.rateOverTime.scalar
@@ -2739,6 +2775,10 @@ PrefabInstance:
       propertyPath: InitialModule.startColor.maxColor.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8053560625548208965, guid: d9335160649c641839a9d2ac5f59d4ea, type: 3}
+      propertyPath: CollisionModule.multiplyColliderForceByParticleSize
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -2761,6 +2801,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7447275134005177083, guid: d9335160649c641839a9d2ac5f59d4ea, type: 3}
       insertIndex: -1
       addedObject: {fileID: 658554305}
+    - targetCorrespondingSourceObject: {fileID: 7447275134005177083, guid: d9335160649c641839a9d2ac5f59d4ea, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 658554311}
     - targetCorrespondingSourceObject: {fileID: 2489740824233725192, guid: d9335160649c641839a9d2ac5f59d4ea, type: 3}
       insertIndex: -1
       addedObject: {fileID: 341902198}
@@ -3594,7 +3637,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2093210749}
-  - component: {fileID: 2093210753}
   - component: {fileID: 2093210752}
   - component: {fileID: 2093210751}
   - component: {fileID: 2093210750}
@@ -3787,14 +3829,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &2093210753
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2093210748}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &2143781093
 GameObject:
   m_ObjectHideFlags: 0
