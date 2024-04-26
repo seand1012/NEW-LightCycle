@@ -16,12 +16,23 @@ public class MotorbikeController : MonoBehaviour
     void FixedUpdate()
     {
         // Input for acceleration and steering
+        // Applying forward force
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
 
-        // Applying forward force
         Vector3 forceDirection = transform.up * moveVertical * force;
-        rb.AddForce(forceDirection);
+
+
+        if (moveVertical > 0) {
+            // Forward movement
+            rb.AddForce(forceDirection);
+        } else if (moveVertical < 0) {
+            // Braking - apply a force in the opposite direction of current movement
+            Vector3 brakingForceDirection = -rb.velocity.normalized * Mathf.Abs(moveVertical) * force;
+            rb.AddForce(brakingForceDirection);
+        }
+
+
 
         // Calculate the current speed and local velocity
         float currentSpeed = rb.velocity.magnitude;

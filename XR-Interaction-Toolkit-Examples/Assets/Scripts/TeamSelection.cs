@@ -5,22 +5,23 @@ using UnityEngine.SceneManagement;
 
 public class TeamSelection : MonoBehaviour
 {
-    public void ChooseHeroes()
+    public void ChooseTeam(string team)
     {
-        StartLightCycleBattle("Heroes");
-    }
+        // Check if this is the first player to choose a team
+        if (!PlayerPrefs.HasKey("ChosenTeam"))
+        {
+            // Set the chosen team
+            PlayerPrefs.SetString("ChosenTeam", team);
 
-    public void ChooseVillains()
-    {
-        StartLightCycleBattle("Villains");
-    }
+            // Start the multiplayer scene
+            SceneManager.LoadScene("TronLevel", LoadSceneMode.Single);
+        }
+        else
+        {
+            // Start the scene for subsequent players (not host)
+            SceneManager.LoadScene("TronLevel", LoadSceneMode.Single);
+        }
 
-    private void StartLightCycleBattle(string team)
-    {
-        SceneManager.LoadScene("TronLevel", LoadSceneMode.Single);
-        // Pass chosen team to LightCycleBattle scene using PlayerPrefs or other methods
-        PlayerPrefs.SetString("ChosenTeam", team);
-    }
 
-    
+    }
 }

@@ -1,18 +1,38 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Security.Cryptography;
 using Unity.Netcode;
 using Unity.Networking.Transport;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.Networking;
 
 public class TronLevelManager : NetworkManager
 {
     public GameObject[] playerPrefabs; // Array of player prefabs
-    public Transform[] spawnPoints; // Array of spawn point
-    public Vector3 spawnPosition; // Variable to hold the spawn position
+    public Transform[] heroSpawnPoints;
+    public Transform[] villainSpawnPoints;
+    public Vector3 spawnPosition;
 
+    /*public override void OnStartServer()
+    {
+        base.OnStartServer();
 
+        // Check if this is the host
+        if (NetworkManager.Singleton.IsHost)
+        {
+            // Determine spawn points based on chosen team
+            string chosenTeam = PlayerPrefs.GetString("ChosenTeam");
+            Transform[] spawnPoints = chosenTeam == "Heroes" ? heroSpawnPoints : villainSpawnPoints;
+
+            // Assign spawn points to the NetworkManager
+            networkConfig.NetworkPrefabs.Add(playerPrefabs[0]); // Villain prefab
+            networkConfig.NetworkPrefabs.Add(playerPrefabs[1]); // Hero prefab
+            for (int i = 0; i < spawnPoints.Length; i++)
+            {
+                NetworkSpawnManager.Spawn(spawnPoints[i].position, Quaternion.identity);
+            }
+        }
+    }*/
+
+    
     void Start()
     {
         // You can initialize any required variables or setup here
@@ -99,4 +119,6 @@ public class TronLevelManager : NetworkManager
         Debug.Log(objectToSpawn.ToString());
         Instantiate(objectToSpawn, spawnPosition, Quaternion.identity);
     }
+
+
 }
