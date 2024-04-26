@@ -517,8 +517,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 443866419}
         m_TargetAssemblyTypeName: TeamSelection, Assembly-CSharp
-        m_MethodName: ChooseVillains
-        m_Mode: 1
+        m_MethodName: ChooseTeam
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -577,6 +577,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9fff12131da9df48b9a16ed80ad32d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  networkManager: {fileID: 0}
 --- !u!1 &697235869
 GameObject:
   m_ObjectHideFlags: 0
@@ -931,8 +932,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1774185680}
         m_TargetAssemblyTypeName: TeamSelection, Assembly-CSharp
-        m_MethodName: ChooseHeroes
-        m_Mode: 1
+        m_MethodName: ChooseTeam
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -991,6 +992,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9fff12131da9df48b9a16ed80ad32d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  networkManager: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

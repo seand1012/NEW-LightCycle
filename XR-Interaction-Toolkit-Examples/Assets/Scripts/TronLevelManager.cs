@@ -1,19 +1,18 @@
-using Unity.Netcode;
-using Unity.Networking.Transport;
+
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.Networking;
+using Unity.Netcode;
 
 public class TronLevelManager : NetworkManager
 {
     public GameObject[] playerPrefabs; // Array of player prefabs
     public Transform[] heroSpawnPoints;
     public Transform[] villainSpawnPoints;
-    public Vector3 spawnPosition;
 
-    /*public override void OnStartServer()
+    /*public override void OnStartServerHost()
     {
         base.OnStartServer();
+
+        string chosenTeam = PlayerPrefs.GetString("ChosenTeam");
 
         // Check if this is the host
         if (NetworkManager.Singleton.IsHost)
@@ -32,7 +31,7 @@ public class TronLevelManager : NetworkManager
         }
     }*/
 
-    
+    /*
     void Start()
     {
         // You can initialize any required variables or setup here
@@ -111,7 +110,7 @@ public class TronLevelManager : NetworkManager
             NetworkManager.Singleton.NetworkConfig.NetworkTransport.GetType().Name);
         GUILayout.Label("Mode: " + mode);
     }
-
+    /*
     // Function to spawn an object at a specified position
     public void SpawnObject(GameObject objectToSpawn)
     {
@@ -120,5 +119,5 @@ public class TronLevelManager : NetworkManager
         Instantiate(objectToSpawn, spawnPosition, Quaternion.identity);
     }
 
-
+    */
 }
