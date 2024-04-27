@@ -1,6 +1,7 @@
 using UnityEngine;
+using Unity.Netcode;
 
-public class MotorbikeController : MonoBehaviour
+public class MotorbikeController : NetworkBehaviour
 {
     public float force = 500.0f;
     public float maxRotationSpeed = 100.0f;
@@ -15,6 +16,8 @@ public class MotorbikeController : MonoBehaviour
 
     void FixedUpdate()
     {
+        if(!IsOwner) return;
+
         // Input for acceleration and steering
         // Applying forward force
         float moveHorizontal = Input.GetAxis("Horizontal");
