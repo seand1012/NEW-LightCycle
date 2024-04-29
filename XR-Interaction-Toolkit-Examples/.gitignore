@@ -82,6 +82,7 @@ crashlytics-build.properties
 !/[Aa]ssets/Bakery/ftLocalStorage.cs
 !/[Aa]ssets/Bakery/ftGlobalStorage.cs
 !/[Aa]ssets/Bakery/BakeryProjectSettings.cs
+!/[Aa]ssets/Bakery/ftRenderLightmap.cs
 
 ############# BAKERY EDITOR ############
 #Ignore Bakery Editor folder
@@ -94,6 +95,7 @@ crashlytics-build.properties
 !/[Aa]ssets/Bakery/ftLocalStorage.cs.meta
 !/[Aa]ssets/Bakery/ftGlobalStorage.cs.meta
 !/[Aa]ssets/Bakery/BakeryProjectSettings.cs.meta
+!/[Aa]ssets/Bakery/ftRenderLightmap.cs.meta
 
 #Re-ignore all *files* in subdirectories
 /[Aa]ssets/Editor/x64/Bakery/hwtestdata/*
