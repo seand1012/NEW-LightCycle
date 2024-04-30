@@ -1,10 +1,12 @@
 
 using UnityEngine;
+using UnityEngine.Networking;
 using Unity.Netcode;
+using UnityEditor;
 
 public class TronLevelManager : NetworkManager
 {
-    public GameObject[] playerPrefabs; // Array of player prefabs
+    public NetworkObject playerPrefab; // Array of player prefabs
     public Transform[] heroSpawnPoints;
     public Transform[] villainSpawnPoints;
 
@@ -60,6 +62,7 @@ public class TronLevelManager : NetworkManager
         GUILayout.EndArea();
     }
 
+
     void CheckStartButtons()
     {
         if (Event.current.type == EventType.Repaint || Event.current.type == EventType.Layout)
@@ -78,8 +81,20 @@ public class TronLevelManager : NetworkManager
                 if (mousePosition.y >= 10 && mousePosition.y <= 110)
                 {
                     // Host button clicked
+                    ConnectionApprovalResponse connectionApprovalResponse = new ConnectionApprovalResponse();   
                     //SpawnObject(Resources.Load<GameObject>("Prefabs/tron_bike"));
+                   
+                  // connectionApprovalResponse.Position = spawnPosition;
+                   // connectionApprovalResponse.Rotation = rotation;
+                   
+                    //NetworkManager.Instantiate(playerPrefab, spawnPosition, rotation);
                     NetworkManager.Singleton.StartHost();
+                    
+                    //Instantiate(playerPrefabs[1], spawnPosition, rotation);
+                    
+                    
+                    
+                    Debug.Log("This is running");
                     //NetworkManager.
 
                 }

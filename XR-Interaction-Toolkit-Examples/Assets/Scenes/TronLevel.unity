@@ -1149,8 +1149,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9fff12131da9df48b9a16ed80ad32d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  playerPrefab: {fileID: 0}
   startingCamera: {fileID: 1628489331}
+  spawnPoints: []
   networkManager: {fileID: 1333198466}
 --- !u!114 &398139444
 MonoBehaviour:
@@ -1967,8 +1968,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9fff12131da9df48b9a16ed80ad32d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  playerPrefab: {fileID: 0}
   startingCamera: {fileID: 1628489331}
+  spawnPoints: []
   networkManager: {fileID: 1333198466}
 --- !u!114 &859806169
 MonoBehaviour:
@@ -2742,7 +2744,7 @@ MonoBehaviour:
   NetworkConfig:
     ProtocolVersion: 0
     NetworkTransport: {fileID: 1333198465}
-    PlayerPrefab: {fileID: 2764957917952681097, guid: 49d472e5157efee419e73d3357730f90, type: 3}
+    PlayerPrefab: {fileID: 142318352}
     Prefabs:
       NetworkPrefabsLists:
       - {fileID: 11400000, guid: 7c3e4ec542851fc418417db9230d27f5, type: 2}
@@ -2794,9 +2796,10 @@ MonoBehaviour:
   NetworkConfig:
     ProtocolVersion: 0
     NetworkTransport: {fileID: 1333198465}
-    PlayerPrefab: {fileID: 2764957917952681097, guid: 49d472e5157efee419e73d3357730f90, type: 3}
+    PlayerPrefab: {fileID: 0}
     Prefabs:
-      NetworkPrefabsLists: []
+      NetworkPrefabsLists:
+      - {fileID: 11400000, guid: 43b8ad0b70d90f74d96f2de698875a3d, type: 2}
     TickRate: 30
     ClientConnectionBufferTimeout: 10
     ConnectionApproval: 0
@@ -2815,7 +2818,7 @@ MonoBehaviour:
     OldPrefabList: []
   RunInBackground: 1
   LogLevel: 1
-  playerPrefabs: []
+  playerPrefab: {fileID: 0}
   heroSpawnPoints: []
   villainSpawnPoints: []
 --- !u!1001 &1349258538
