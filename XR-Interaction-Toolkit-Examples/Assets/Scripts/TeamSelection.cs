@@ -7,7 +7,7 @@ using UnityEditor;
 
 public class TeamSelection : NetworkBehaviour
 {
-    [SerializeField] public GameObject playerPrefab = AssetDatabase.LoadAssetAtPath<GameObject>("Assets/Prefabs/Tron_Hero.prefab");
+    [SerializeField] public GameObject playerPrefab;
     [SerializeField] public Camera startingCamera;
     public Transform[] spawnPoints;
     public NetworkManager networkManager;

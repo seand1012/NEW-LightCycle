@@ -14,8 +14,8 @@ public class MultiplayerHandler : NetworkBehaviour
     [SerializeField] private Camera stationaryCamera;
     [SerializeField] private Transform xrRigCameraTransform;
     [SerializeField] private NetworkManager networkManager;
-    [SerializeField] private GameObject heroPrefab;
-    [SerializeField] private GameObject villainPrefab;
+    [SerializeField] private NetworkObject heroPrefab;
+    [SerializeField] private NetworkObject villainPrefab;
 
     private bool hasChosenTeam = false;
 
@@ -76,7 +76,7 @@ public class MultiplayerHandler : NetworkBehaviour
             string chosenTeam = PlayerPrefs.GetString("ChosenTeam");
             Vector3 startingPosition;
             Quaternion startingRotation;
-            GameObject player;
+            NetworkObject player;
             Debug.Log("Chosen team: " + chosenTeam);
             if (chosenTeam == "Heroes") 
             {

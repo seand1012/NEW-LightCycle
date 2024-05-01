@@ -8376,7 +8376,7 @@ MonoBehaviour:
   ConnectionData:
     Address: 127.0.0.1
     Port: 7777
-    ServerListenAddress: 127.0.0.1
+    ServerListenAddress: 0.0.0.0
   DebugSimulator:
     PacketDelayMS: 0
     PacketJitterMS: 0
@@ -8396,10 +8396,10 @@ MonoBehaviour:
   NetworkConfig:
     ProtocolVersion: 0
     NetworkTransport: {fileID: 1098680362}
-    PlayerPrefab: {fileID: 5416626556047546521, guid: bcb273310abe0ef42a20c74f698cf0c4, type: 3}
+    PlayerPrefab: {fileID: 2764957917952681097, guid: 5b3aadb954b0394449cccdb8874c8eba, type: 3}
     Prefabs:
       NetworkPrefabsLists:
-      - {fileID: 11400000, guid: 8d26051f966b3a046b7f871e5cc35788, type: 2}
+      - {fileID: 11400000, guid: 43b8ad0b70d90f74d96f2de698875a3d, type: 2}
     TickRate: 30
     ClientConnectionBufferTimeout: 10
     ConnectionApproval: 0
@@ -8841,8 +8841,8 @@ MonoBehaviour:
   stationaryCamera: {fileID: 1440866837}
   xrRigCameraTransform: {fileID: 1765056282}
   networkManager: {fileID: 1098680363}
-  heroPrefab: {fileID: 2764957917952681097, guid: 5b3aadb954b0394449cccdb8874c8eba, type: 3}
-  villainPrefab: {fileID: 2764957917952681097, guid: 13a810c49f04d3d4bafb6ddc9aa03640, type: 3}
+  heroPrefab: {fileID: 8353238535744192807, guid: 5b3aadb954b0394449cccdb8874c8eba, type: 3}
+  villainPrefab: {fileID: 8353238535744192807, guid: 13a810c49f04d3d4bafb6ddc9aa03640, type: 3}
 --- !u!4 &1287321098
 Transform:
   m_ObjectHideFlags: 0
