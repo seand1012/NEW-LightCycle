@@ -16,7 +16,7 @@ public class MotorbikeController : NetworkBehaviour
 
     void FixedUpdate()
     {
-        if(!IsOwner) return;
+        //if(!IsOwner) return;
 
         // Input for acceleration and steering
         // Applying forward force
