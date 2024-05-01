@@ -14,7 +14,8 @@ public class MultiplayerHandler : NetworkBehaviour
     [SerializeField] private Camera stationaryCamera;
     [SerializeField] private Transform xrRigCameraTransform;
     [SerializeField] private NetworkManager networkManager;
-    [SerializeField] private GameObject playerPrefab;
+    [SerializeField] private GameObject heroPrefab;
+    [SerializeField] private GameObject villainPrefab;
 
     private bool hasChosenTeam = false;
 
@@ -82,13 +83,13 @@ public class MultiplayerHandler : NetworkBehaviour
                 startingPosition = new Vector3(75f, 1f, 0f);
                 startingRotation = Quaternion.Euler(-90f, 230f, -140f);
                 // Instantiate the player prefab
-                player = Instantiate(playerPrefab, startingPosition, startingRotation);
+                player = Instantiate(heroPrefab, startingPosition, startingRotation);
             }
             else
             {
                 startingPosition = new Vector3(-75f, 1f, 0f);
                 startingRotation = Quaternion.Euler(-90f, 0f, -90f);
-                player = Instantiate(playerPrefab, startingPosition, startingRotation);
+                player = Instantiate(villainPrefab, startingPosition, startingRotation);
             }
             
 

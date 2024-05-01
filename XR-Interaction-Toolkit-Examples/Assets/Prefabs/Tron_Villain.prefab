@@ -1794,7 +1794,7 @@ TrailRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 17aa2adc5a062ec4fae490380e5d6bee, type: 2}
+  - {fileID: 2100000, guid: f32710e5b7b22d8429b5cf5660af1b8c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1837,7 +1837,7 @@ TrailRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 0.8784314, g: 0.98039216, b: 1, a: 1}
+      key0: {r: 0.94509804, g: 0.3764706, b: 0.07450981, a: 1}
       key1: {r: 1, g: 1, b: 1, a: 1}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
@@ -1871,7 +1871,7 @@ TrailRenderer:
     textureMode: 0
     textureScale: {x: 2, y: 5}
     shadowBias: 0.5
-    generateLightingData: 1
+    generateLightingData: 0
   m_MinVertexDistance: 0.1
   m_MaskInteraction: 0
   m_Autodestruct: 0
@@ -6781,23 +6781,23 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 088a57c120c6ced458a74bf2fec6a097, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 1442067f362f943409362f6a8e691918, type: 2}
+      objectReference: {fileID: 2100000, guid: 99a4f258e8117b34988c0b030e0f85bd, type: 2}
     - target: {fileID: -7511558181221131132, guid: 088a57c120c6ced458a74bf2fec6a097, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
-      objectReference: {fileID: 2100000, guid: 1442067f362f943409362f6a8e691918, type: 2}
+      objectReference: {fileID: 2100000, guid: 99a4f258e8117b34988c0b030e0f85bd, type: 2}
     - target: {fileID: -7511558181221131132, guid: 088a57c120c6ced458a74bf2fec6a097, type: 3}
       propertyPath: m_Materials.Array.data[2]
       value: 
-      objectReference: {fileID: 2100000, guid: 1442067f362f943409362f6a8e691918, type: 2}
+      objectReference: {fileID: 2100000, guid: 99a4f258e8117b34988c0b030e0f85bd, type: 2}
     - target: {fileID: -7511558181221131132, guid: 088a57c120c6ced458a74bf2fec6a097, type: 3}
       propertyPath: m_Materials.Array.data[3]
       value: 
-      objectReference: {fileID: 2100000, guid: 1442067f362f943409362f6a8e691918, type: 2}
+      objectReference: {fileID: 2100000, guid: 99a4f258e8117b34988c0b030e0f85bd, type: 2}
     - target: {fileID: -7511558181221131132, guid: 088a57c120c6ced458a74bf2fec6a097, type: 3}
       propertyPath: m_Materials.Array.data[4]
       value: 
-      objectReference: {fileID: 2100000, guid: 1442067f362f943409362f6a8e691918, type: 2}
+      objectReference: {fileID: 2100000, guid: 99a4f258e8117b34988c0b030e0f85bd, type: 2}
     - target: {fileID: 919132149155446097, guid: 088a57c120c6ced458a74bf2fec6a097, type: 3}
       propertyPath: m_Name
       value: Tron_Villain
@@ -7012,7 +7012,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 546164270
+  GlobalObjectIdHash: 171276853
   InScenePlacedSourceGlobalObjectIdHash: 0
   AlwaysReplicateAsRoot: 0
   SynchronizeTransform: 1
