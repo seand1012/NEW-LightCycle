@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.00569868, g: 0.015570379, b: 0.022756362, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7702,7 +7702,7 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 107673975}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: a6f90fbec29104a0b84efa2069298bc3, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -8074,7 +8074,7 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 590221592}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: a6f90fbec29104a0b84efa2069298bc3, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -8396,7 +8396,7 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1401481290}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: a6f90fbec29104a0b84efa2069298bc3, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
