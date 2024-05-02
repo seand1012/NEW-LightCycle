@@ -23,6 +23,7 @@ public class MultiplayerHandler : NetworkBehaviour
     void Start()
     {
         //networkManager.transform = NetworkManager.Singleton.gameObject.AddComponent<UNETTransport>();
+        
         heroesButton.onClick.AddListener(() => ChooseTeam("Heroes"));
         villainsButton.onClick.AddListener(() => ChooseTeam("Villains"));
     }
@@ -34,16 +35,19 @@ public class MultiplayerHandler : NetworkBehaviour
             // Set the chosen team
             PlayerPrefs.SetString("ChosenTeam", team);
 
-            if (!networkManager.IsServer)
+            //if (!networkManager.IsServer)
+            if(team == "Heroes")
             {
                 // Start the host
                 Debug.Log("Starting host");
+                networkManager.NetworkConfig.ConnectionApproval = true;
                 networkManager.StartHost();
             }
             else
             {
                 // Start the client
                 Debug.Log("Starting client");
+                
                 networkManager.StartClient();
             }
 
@@ -92,6 +96,7 @@ public class MultiplayerHandler : NetworkBehaviour
                 startingPosition = new Vector3(-135f, 5f, 0f);
                 startingRotation = Quaternion.Euler(-90f, 0f, -90f);
                 player = Instantiate(villainPrefab, startingPosition, startingRotation);
+                networkManager.ConnectionApprovalCallback = player;
             }
 
 
