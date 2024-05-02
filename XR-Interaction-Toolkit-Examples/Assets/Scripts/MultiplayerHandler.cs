@@ -6,6 +6,7 @@ using Unity.Netcode;
 using UnityEngine.SceneManagement;
 using Unity.Networking.Transport;
 using Unity.XR.CoreUtils;
+using Unity.Netcode.Transports.UTP;
 
 public class MultiplayerHandler : NetworkBehaviour
 {
@@ -21,6 +22,7 @@ public class MultiplayerHandler : NetworkBehaviour
 
     void Start()
     {
+        //networkManager.transform = NetworkManager.Singleton.gameObject.AddComponent<UNETTransport>();
         heroesButton.onClick.AddListener(() => ChooseTeam("Heroes"));
         villainsButton.onClick.AddListener(() => ChooseTeam("Villains"));
     }
