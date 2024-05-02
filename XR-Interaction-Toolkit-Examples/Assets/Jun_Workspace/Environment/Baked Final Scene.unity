@@ -17660,7 +17660,7 @@ MonoBehaviour:
   stationaryCamera: {fileID: 1528114200}
   xrRigCameraTransform: {fileID: 8383539}
   networkManager: {fileID: 19416128}
-  heroPrefab: {fileID: 8353238535744192807, guid: 5b3aadb954b0394449cccdb8874c8eba, type: 3}
+  heroPrefab: {fileID: 8353238535744192807, guid: f20d4eb9166e312478d44ad9ae55e5cb, type: 3}
   villainPrefab: {fileID: 8353238535744192807, guid: f20d4eb9166e312478d44ad9ae55e5cb, type: 3}
 --- !u!4 &1231484172
 Transform:
