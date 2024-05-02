@@ -96,7 +96,7 @@ public class MultiplayerHandler : NetworkBehaviour
                 startingPosition = new Vector3(-135f, 5f, 0f);
                 startingRotation = Quaternion.Euler(-90f, 0f, -90f);
                 player = Instantiate(villainPrefab, startingPosition, startingRotation);
-                networkManager.ConnectionApprovalCallback = player;
+                //networkManager.ConnectionApprovalCallback = player;
             }
 
 

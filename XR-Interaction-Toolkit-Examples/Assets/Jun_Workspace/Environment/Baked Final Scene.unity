@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0056694956, g: 0.015580628, b: 0.02250965, a: 1}
+  m_IndirectSpecularColor: {r: 0.00569868, g: 0.015570379, b: 0.022756362, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -239,7 +239,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f6f4c06ace2cd02439ae95204850e6dc, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.5
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f6f4c06ace2cd02439ae95204850e6dc, type: 3}
       propertyPath: m_LocalScale.z
@@ -827,6 +827,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[4]
       value: 
       objectReference: {fileID: 2100000, guid: 76a0dc52c1475f645b6f563b8980b414, type: 2}
+    - target: {fileID: 6664636468689024572, guid: f20d4eb9166e312478d44ad9ae55e5cb, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: a6f90fbec29104a0b84efa2069298bc3, type: 2}
     - target: {fileID: 8353238535744192807, guid: f20d4eb9166e312478d44ad9ae55e5cb, type: 3}
       propertyPath: GlobalObjectIdHash
       value: 4108038116
@@ -1222,7 +1226,7 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 110021404}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: a6f90fbec29104a0b84efa2069298bc3, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -15339,8 +15343,8 @@ MonoBehaviour:
   - {fileID: 872227159}
   prefabStage: {fileID: 0}
   quickEditingComponent: {fileID: 2039990886}
-  dataPath: C:/Users/DSLab/Documents/GitHub/NEW-LightCycle/XR-Interaction-Toolkit-Examples/Assets
-  workPath: C:/Users/DSLab/Documents/GitHub/NEW-LightCycle/XR-Interaction-Toolkit-Examples/Assets\Magic
+  dataPath: /Users/antonyrainchik/Documents/GitHub/LightCycle/NEW-LightCycle/XR-Interaction-Toolkit-Examples/Assets
+  workPath: /Users/antonyrainchik/Documents/GitHub/LightCycle/NEW-LightCycle/XR-Interaction-Toolkit-Examples/Assets/Magic
     Light Probes
   workPathFound: 1
   localFinishedPositions:
@@ -16521,7 +16525,7 @@ MonoBehaviour:
   - {x: -80.44866, y: 15.966948, z: -95.07007}
   - {x: -80.44865, y: 15.652636, z: -84.54011}
   - {x: -141.94861, y: 7, z: -29.194244}
-  assetEditorPath: C:/Users/DSLab/Documents/GitHub/NEW-LightCycle/XR-Interaction-Toolkit-Examples/Assets\Magic
+  assetEditorPath: /Users/antonyrainchik/Documents/GitHub/LightCycle/NEW-LightCycle/XR-Interaction-Toolkit-Examples/Assets/Magic
     Light Probes/Editor/
   parentVolume: {fileID: 0}
   localOperationalDataLost: 1
@@ -17116,7 +17120,7 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 107673975}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: a6f90fbec29104a0b84efa2069298bc3, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -17218,7 +17222,7 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1139800043}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: a6f90fbec29104a0b84efa2069298bc3, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -17329,7 +17333,7 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1139589563}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: a6f90fbec29104a0b84efa2069298bc3, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -17444,7 +17448,7 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 590221592}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: a6f90fbec29104a0b84efa2069298bc3, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -18113,7 +18117,7 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1401481290}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: a6f90fbec29104a0b84efa2069298bc3, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -19101,7 +19105,7 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1076404122}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: a6f90fbec29104a0b84efa2069298bc3, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -20314,7 +20318,7 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1785063486}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: a6f90fbec29104a0b84efa2069298bc3, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -20425,7 +20429,7 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 750790284}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: a6f90fbec29104a0b84efa2069298bc3, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -20496,7 +20500,7 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1857388199}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: a6f90fbec29104a0b84efa2069298bc3, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -20876,7 +20880,7 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 600624495}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: a6f90fbec29104a0b84efa2069298bc3, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
