@@ -223,7 +223,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 3098287380
+  GlobalObjectIdHash: 7701716
   InScenePlacedSourceGlobalObjectIdHash: 0
   AlwaysReplicateAsRoot: 0
   SynchronizeTransform: 1
@@ -302,7 +302,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 1442067f362f943409362f6a8e691918, type: 2}
     - target: {fileID: 919132149155446097, guid: 088a57c120c6ced458a74bf2fec6a097, type: 3}
       propertyPath: m_Name
-      value: tron_bike
+      value: tron_bike 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 088a57c120c6ced458a74bf2fec6a097, type: 3}
       propertyPath: m_IsActive
@@ -326,10 +326,10 @@ PrefabInstance:
       addedObject: {fileID: 3263186880163769644}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 088a57c120c6ced458a74bf2fec6a097, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 4007969928238868227}
+      addedObject: {fileID: 5139856262711082178}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 088a57c120c6ced458a74bf2fec6a097, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 5139856262711082178}
+      addedObject: {fileID: 4007969928238868227}
   m_SourcePrefab: {fileID: 100100000, guid: 088a57c120c6ced458a74bf2fec6a097, type: 3}
 --- !u!4 &5948122754872689647 stripped
 Transform:
@@ -494,6 +494,27 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4344387857495762262, guid: 088a57c120c6ced458a74bf2fec6a097, type: 3}
+--- !u!114 &5139856262711082178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6467215850354678101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GlobalObjectIdHash: 3277253162
+  InScenePlacedSourceGlobalObjectIdHash: 0
+  AlwaysReplicateAsRoot: 0
+  SynchronizeTransform: 1
+  ActiveSceneSynchronization: 0
+  SceneMigrationSynchronization: 1
+  SpawnWithObservers: 1
+  DontDestroyWithOwner: 1
+  AutoObjectParentSync: 1
 --- !u!114 &4007969928238868227
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -509,24 +530,3 @@ MonoBehaviour:
   force: 5000
   maxRotationSpeed: 100
   lateralFriction: 0.95
---- !u!114 &5139856262711082178
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6467215850354678101}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 3695413999
-  InScenePlacedSourceGlobalObjectIdHash: 0
-  AlwaysReplicateAsRoot: 0
-  SynchronizeTransform: 1
-  ActiveSceneSynchronization: 0
-  SceneMigrationSynchronization: 1
-  SpawnWithObservers: 1
-  DontDestroyWithOwner: 1
-  AutoObjectParentSync: 1
