@@ -128,6 +128,8 @@ public class MultiplayerHandler : NetworkBehaviour
     [SerializeField] private NetworkManager networkManager;
     [SerializeField] private NetworkObject playerPrefab;
 
+    Vector3 startingPosition;
+    Quaternion startingRotation;
     private bool hasChosenRole = false;
 
     void Start()
@@ -141,6 +143,8 @@ public class MultiplayerHandler : NetworkBehaviour
         if (!hasChosenRole)
         {
             Debug.Log("Starting host");
+            startingPosition = new Vector3(135f, 5f, 0f);
+            startingRotation = Quaternion.Euler(-90f, 230f, -140f);
             networkManager.NetworkConfig.ConnectionApproval = true;
             networkManager.StartHost();
             OnRoleSelected();
@@ -152,6 +156,8 @@ public class MultiplayerHandler : NetworkBehaviour
         if (!hasChosenRole)
         {
             Debug.Log("Starting client");
+            startingPosition = new Vector3(-135f, 5f, 0f);
+            startingRotation = Quaternion.Euler(90f, 230f, -140f);
             networkManager.StartClient();
             OnRoleSelected();
         }
@@ -174,17 +180,17 @@ public class MultiplayerHandler : NetworkBehaviour
     {
         if (networkManager.IsServer)
         {
-            Vector3 startingPosition = new Vector3(135f, 5f, 0f);
-            Quaternion startingRotation = Quaternion.Euler(-90f, 230f, -140f);
+            //Vector3 startingPosition = new Vector3(135f, 5f, 0f);
+            //Quaternion startingRotation = Quaternion.Euler(-90f, 230f, -140f);
             NetworkObject player = Instantiate(playerPrefab, startingPosition, startingRotation);
             player.Spawn();
         }
-        else
+        /*else
         {
-            Vector3 startingPosition = new Vector3(-135f, 5f, 0f);
-            Quaternion startingRotation = Quaternion.Euler(90f, 230f, -140f);
+            //Vector3 startingPosition = new Vector3(-135f, 5f, 0f);
+            //Quaternion startingRotation = Quaternion.Euler(90f, 230f, -140f);
             NetworkObject player = Instantiate(playerPrefab, startingPosition, startingRotation);
             player.Spawn();
-        }
+        }*/
     }
 }
