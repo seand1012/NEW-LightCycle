@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 using Unity.Networking.Transport;
 using Unity.XR.CoreUtils;
 using Unity.Netcode.Transports.UTP;
+/*
 
 public class MultiplayerHandler : NetworkBehaviour
 {
@@ -35,8 +36,8 @@ public class MultiplayerHandler : NetworkBehaviour
             // Set the chosen team
             PlayerPrefs.SetString("ChosenTeam", team);
 
-            //if (!networkManager.IsServer)
-            if(team == "Heroes")
+            if (!networkManager.IsServer)
+            //if(team == "Heroes")
             {
                 // Start the host
                 Debug.Log("Starting host");
@@ -113,6 +114,77 @@ public class MultiplayerHandler : NetworkBehaviour
         else
         {
             Debug.LogError("Chosen team not set for the client.");
+        }
+    }
+}
+*/
+
+public class MultiplayerHandler : NetworkBehaviour
+{
+    [SerializeField] private Button hostButton;
+    [SerializeField] private Button clientButton;
+    [SerializeField] private Camera stationaryCamera;
+    [SerializeField] private Transform xrRigCameraTransform;
+    [SerializeField] private NetworkManager networkManager;
+    [SerializeField] private NetworkObject playerPrefab;
+
+    private bool hasChosenRole = false;
+
+    void Start()
+    {
+        hostButton.onClick.AddListener(StartHost);
+        clientButton.onClick.AddListener(StartClient);
+    }
+
+    public void StartHost()
+    {
+        if (!hasChosenRole)
+        {
+            Debug.Log("Starting host");
+            networkManager.NetworkConfig.ConnectionApproval = true;
+            networkManager.StartHost();
+            OnRoleSelected();
+        }
+    }
+
+    public void StartClient()
+    {
+        if (!hasChosenRole)
+        {
+            Debug.Log("Starting client");
+            networkManager.StartClient();
+            OnRoleSelected();
+        }
+    }
+
+    private void OnRoleSelected()
+    {
+        hasChosenRole = true;
+
+        hostButton.gameObject.SetActive(false);
+        clientButton.gameObject.SetActive(false);
+
+        stationaryCamera.gameObject.SetActive(false);
+        xrRigCameraTransform.gameObject.SetActive(true);
+
+        SpawnPlayer();
+    }
+
+    void SpawnPlayer()
+    {
+        if (networkManager.IsServer)
+        {
+            Vector3 startingPosition = new Vector3(135f, 5f, 0f);
+            Quaternion startingRotation = Quaternion.Euler(-90f, 230f, -140f);
+            NetworkObject player = Instantiate(playerPrefab, startingPosition, startingRotation);
+            player.Spawn();
+        }
+        else
+        {
+            Vector3 startingPosition = new Vector3(-135f, 5f, 0f);
+            Quaternion startingRotation = Quaternion.Euler(90f, 230f, -140f);
+            NetworkObject player = Instantiate(playerPrefab, startingPosition, startingRotation);
+            player.Spawn();
         }
     }
 }

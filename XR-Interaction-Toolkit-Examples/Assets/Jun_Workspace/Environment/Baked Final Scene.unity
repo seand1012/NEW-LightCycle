@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.00569868, g: 0.015570379, b: 0.022756362, a: 1}
+  m_IndirectSpecularColor: {r: 0.0056694956, g: 0.015580628, b: 0.02250965, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -15343,8 +15343,8 @@ MonoBehaviour:
   - {fileID: 872227159}
   prefabStage: {fileID: 0}
   quickEditingComponent: {fileID: 2039990886}
-  dataPath: /Users/antonyrainchik/Documents/GitHub/LightCycle/NEW-LightCycle/XR-Interaction-Toolkit-Examples/Assets
-  workPath: /Users/antonyrainchik/Documents/GitHub/LightCycle/NEW-LightCycle/XR-Interaction-Toolkit-Examples/Assets/Magic
+  dataPath: C:/Users/sdegrazia/Documents/GitHub/NEW-LightCycle/XR-Interaction-Toolkit-Examples/Assets
+  workPath: C:/Users/sdegrazia/Documents/GitHub/NEW-LightCycle/XR-Interaction-Toolkit-Examples/Assets\Magic
     Light Probes
   workPathFound: 1
   localFinishedPositions:
@@ -16525,7 +16525,7 @@ MonoBehaviour:
   - {x: -80.44866, y: 15.966948, z: -95.07007}
   - {x: -80.44865, y: 15.652636, z: -84.54011}
   - {x: -141.94861, y: 7, z: -29.194244}
-  assetEditorPath: /Users/antonyrainchik/Documents/GitHub/LightCycle/NEW-LightCycle/XR-Interaction-Toolkit-Examples/Assets/Magic
+  assetEditorPath: C:/Users/sdegrazia/Documents/GitHub/NEW-LightCycle/XR-Interaction-Toolkit-Examples/Assets\Magic
     Light Probes/Editor/
   parentVolume: {fileID: 0}
   localOperationalDataLost: 1
@@ -17655,13 +17655,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bd868c247f33c84e809f30a90d1789d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heroesButton: {fileID: 530466142}
-  villainsButton: {fileID: 335055936}
+  hostButton: {fileID: 530466142}
+  clientButton: {fileID: 335055936}
   stationaryCamera: {fileID: 1528114200}
   xrRigCameraTransform: {fileID: 8383539}
   networkManager: {fileID: 19416128}
-  heroPrefab: {fileID: 8353238535744192807, guid: f20d4eb9166e312478d44ad9ae55e5cb, type: 3}
-  villainPrefab: {fileID: 8353238535744192807, guid: f20d4eb9166e312478d44ad9ae55e5cb, type: 3}
+  playerPrefab: {fileID: 8353238535744192807, guid: 49d472e5157efee419e73d3357730f90, type: 3}
 --- !u!4 &1231484172
 Transform:
   m_ObjectHideFlags: 0
@@ -19512,7 +19511,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Choose Team Villains
+  m_text: Join As Client
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -20572,7 +20571,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Choose Team Heroes
+  m_text: Join As Host
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
