@@ -5,6 +5,7 @@ using UnityEngine.AI;
 
 public class NavScipt : MonoBehaviour
 {
+
     public GameObject spot1;
     private NavMeshAgent agent;
     // Start is called before the first frame update
