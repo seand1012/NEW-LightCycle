@@ -33,7 +33,7 @@ namespace UnityEditor.XR.Interaction.Toolkit.Samples
         {
             if (s_BuildValidationRules.Count == 0)
             {
-                s_BuildValidationRules.Add(
+                /*s_BuildValidationRules.Add(
                     new BuildValidationRule
                     {
                         Category = k_Category,
@@ -50,7 +50,7 @@ namespace UnityEditor.XR.Interaction.Toolkit.Samples
                             else
                                 SettingsService.OpenProjectSettings(XRInteractionToolkitSettingsProvider.k_SettingsPath);
                         },
-                    });
+                    });*/
             }
 
             foreach (var buildTargetGroup in s_BuildTargetGroups)
