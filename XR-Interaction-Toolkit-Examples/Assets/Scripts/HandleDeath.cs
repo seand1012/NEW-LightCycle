@@ -6,21 +6,15 @@ public class HandleDeath : MonoBehaviour
 {
     public GameObject Player;
     public GameObject AI;
-    public Camera MainCamera;
-    public Camera PlayerCamera;
-  
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+
     // Update is called once per frame
     void Update()
     {
-        if(AI == null) 
-        {
-            PlayerCamera.enabled = false;
-            MainCamera.enabled = true;
-            MainCamera.depth = 10;
-        }
-        if(Player == null)
-        {
-            MainCamera.enabled = true;
-        }
+        
     }
 }
