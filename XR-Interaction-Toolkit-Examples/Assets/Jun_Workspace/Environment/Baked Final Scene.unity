@@ -472,6 +472,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 3ed7e0d4d3ff141478f7776395d288d5, type: 3}
   m_PrefabInstance: {fileID: 316730333}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &138091010 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2764957917952681097, guid: 49d472e5157efee419e73d3357730f90, type: 3}
+  m_PrefabInstance: {fileID: 1069711375}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &152631888
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1853,6 +1858,53 @@ MonoBehaviour:
   fixPos3D: 0
   voxelSize: {x: 1, y: 1, z: 1}
   passedFilter: 0
+--- !u!1 &451031153
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 451031155}
+  - component: {fileID: 451031154}
+  m_Layer: 0
+  m_Name: DeathHandler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &451031154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 451031153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2b7dfc6678d38a42bf4d6e2834a2452, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 138091010}
+  AI: {fileID: 271689910}
+  PlayerCamera: {fileID: 1279546523}
+--- !u!4 &451031155
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 451031153}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -80.87755, y: 36.736206, z: -2.2572622}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &456475950
 GameObject:
   m_ObjectHideFlags: 0
@@ -18242,6 +18294,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49d472e5157efee419e73d3357730f90, type: 3}
+--- !u!20 &1279546523 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 4924010833410933605, guid: 49d472e5157efee419e73d3357730f90, type: 3}
+  m_PrefabInstance: {fileID: 1069711375}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1282395529
 GameObject:
   m_ObjectHideFlags: 0
@@ -22060,3 +22117,4 @@ SceneRoots:
   - {fileID: 337106176}
   - {fileID: 1283095769}
   - {fileID: 1069711375}
+  - {fileID: 451031155}

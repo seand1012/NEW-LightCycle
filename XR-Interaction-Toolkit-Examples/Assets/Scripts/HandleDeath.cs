@@ -2,19 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HandleDeath : MonoBehaviour
+public class HandleDeath1 : MonoBehaviour
 {
     public GameObject Player;
     public GameObject AI;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
+    public Camera PlayerCamera;
     // Update is called once per frame
     void Update()
     {
-        
+        if (AI == null)
+        {
+            PlayerCamera.enabled = false; ;
+        }
     }
 }

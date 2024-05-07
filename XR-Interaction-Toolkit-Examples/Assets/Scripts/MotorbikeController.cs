@@ -45,8 +45,9 @@ public class MotorbikeController : NetworkBehaviour
         localVel.x *= lateralFriction;
         rb.velocity = transform.TransformDirection(localVel);
 
-        if(transform.position.y > 13.5){
-            rb.AddForce(new Vector3(0,-50.0f,0), ForceMode.Acceleration);
+        if (transform.position.y > 13.5)
+        {
+            rb.AddForce(new Vector3(0, -50.0f, 0), ForceMode.Acceleration);
         }
 
         // Apply turning
